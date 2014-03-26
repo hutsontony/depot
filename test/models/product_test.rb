@@ -45,11 +45,26 @@ class ProductTest < ActiveSupport::TestCase
   	bad.each do |name|
   		assert new_product(name).invalid?, "#{name} Should'nt be valid"
   	end
-
-    test "product is not valid without unique title" do
-      product = Product.new(title: products(:ruby).title, description: "yyyyy", price: 1, image_url: "fred.gif")
-      assert product.invalid?
-      assert_equal ["has already been taken"], product.errors[:title]#.join('; ')
-    end
 end
+    test "title should be a least 4 charecters" do
+      product = Product.create(title: "baa", description: "ttggg", price: 1, image_url: "baa.jpg")
+      assert products = 0 #NOT WORKING !!>
+    end
+
+   # test "should have a unique title" do
+     # product1 = Product.create(title:"ruby", description: "yyyyy", price: 1, image_url: "fred.gif")
+     # assert product1.valid?, "product1 was not valid #{product1.errors.inspect}"
+     # product2 = product.new(title: product1.title, description: "yyyyy", price: 1, image_url: "fred.gif")
+     # product2.valid
+    #  assert_not_nil product2.errors.on(:title)
+   # end
+
+   #test "product is not valid without a unique title" do
+   # product = product.new(title: products(:ruby).title,
+      #description: "yyrttryy",
+     # price: 1,
+     # image_url: "fred.gif")
+  #assert !product.save
+  #assert_equal "has already been taken", product.errors[:title].join('; ')
+  #end
 end

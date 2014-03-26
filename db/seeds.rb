@@ -11,7 +11,7 @@ Product.create(title: 'The best thing in the world',
 	%{<p>
 		 you have to buy this it is the best thing in the world 
 		 </p>},
- image_url: 'best.jpg',
+ image_url: 'best.jpeg',
  price:400.00)
 
  Product.create(title: 'The worst thing in the world',
@@ -19,7 +19,7 @@ Product.create(title: 'The best thing in the world',
 	%{<p>
 		 you have to buy this it is the worst thing in the world 
 		 </p>},
- image_url: 'worst.jpg',
+ image_url: 'worst.jpeg',
  price:1000.00)
 
   Product.create(title: 'The cutest thing in the world',
@@ -27,7 +27,7 @@ Product.create(title: 'The best thing in the world',
 	%{<p>
 		 you have to buy this it is the cutest thing in the world 
 		 </p>},
- image_url: 'cute.jpg',
+ image_url: 'cute.jpeg',
  price:10000.00)
 
   
